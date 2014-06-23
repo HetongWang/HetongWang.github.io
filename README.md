@@ -1,4 +1,4 @@
-HetongWang.github.io
+Hetong's Github Site
 ====================
 
-Git site
+Github site
