@@ -1,5 +1,5 @@
 body {
-	background-color: #fff;
+	background-color: #000;
 }
 #canvas {
 	width: 100vw;
@@ -17,7 +17,8 @@ h1 {
 	position: absolute;
 	top: 300px;
 	width: 100vw;
-	color: black;
+	color: white;
 	text-align: center;
 	font-size: 72px;
+	font-family: sans-serif;
 }
