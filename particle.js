@@ -173,7 +173,7 @@ Controller = (function() {
                window.setTimeout(callback, 1000 / 60);
              };
     })();
-    this.maxParticles = 500;
+    this.maxParticles = 100;
     this.emissionRate = 1;
     this.view = new View($('canvas')[0]);
     this.particles = [];
