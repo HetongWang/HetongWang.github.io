@@ -1,0 +1,22 @@
+body {
+	background-color: #fff;
+}
+#canvas {
+	width: 100vw;
+	height: 100vh;
+	float: left;
+}
+table {
+	color: #fff;
+	float: left;
+	line-height: 27px;
+	margin-left: 20px;
+	width: 100px;
+}
+h1 {
+	position: absolute;
+	top: 300px;
+	width: 100vw;
+	color: black;
+	text-align: center;
+}
