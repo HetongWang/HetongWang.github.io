@@ -3,7 +3,6 @@ var offsetX = $(window).width() / 2;
 var offsetY = 130;
 
 $(function() {
-  $('body').height(innerHeight);
   gardenCanvas = $("canvas")[0];
   gardenCanvas.width = $('canvas').width();
   gardenCanvas.height = $('canvas').height();
