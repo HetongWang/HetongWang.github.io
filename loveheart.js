@@ -1,6 +1,6 @@
 
 var offsetX = $(window).width() / 2;
-var offsetY = 100;
+var offsetY = 130;
 
 $(function() {
   gardenCanvas = $("canvas")[0];
@@ -73,5 +73,5 @@ function heartAnimation() {
 }
 
 function showMessages() {
-  $('h1').fadeIn();
+  $('#imissu').fadeIn(5000);
 }
