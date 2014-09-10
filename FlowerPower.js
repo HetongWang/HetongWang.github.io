@@ -55,8 +55,8 @@ Garden = (function() {
       max: 15
     },
     petalStretch: {
-      min: 0.3,
-      max: 4
+      min: 0.1,
+      max: 3
     },
     growFactor: {
       min: 0.1,

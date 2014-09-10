@@ -1,6 +1,6 @@
 
 var offsetX = $(window).width() / 2;
-var offsetY = 500;
+var offsetY = 300;
 
 $(function() {
   gardenCanvas = $("canvas")[0];
@@ -30,8 +30,8 @@ window.requestAnimFrame = (function(callback) {
 
 function getHeartPoint(angle) {
   var t = angle / Math.PI;
-  var x = 21.5 * (16 * Math.pow(Math.sin(t), 3));
-  var y = - 22 * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+  var x = 10.5 * (16 * Math.pow(Math.sin(t), 3));
+  var y = - 11 * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
   return new Vector(offsetX + x, offsetY + y);
 }
 
