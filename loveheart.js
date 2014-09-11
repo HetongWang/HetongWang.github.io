@@ -17,7 +17,7 @@ $(function() {
   
   setTimeout(function() {
     $('#messages').typewriter();
-  }, 700)
+  }, 5500)
 });
 
 window.requestAnimFrame = (function(callback) {
