@@ -15,6 +15,9 @@ $(function() {
     heartAnimation();
   }, 1000);
   
+  setTimeout(function() {
+    $('#messages').typewriter();
+  }, 700)
 });
 
 window.requestAnimFrame = (function(callback) {
@@ -27,6 +30,40 @@ window.requestAnimFrame = (function(callback) {
            window.setTimeout(callback, 1000 / 60);
          };
 })();
+
+(function($) {
+  $.fn.typewriter = function() {
+    this.each(function() {
+      var str = $(this).html(), progress = 0;
+      var interpunction = 0, count = 0;
+      var $ele = $(this);
+      $(this).html('').css('display', 'block');;
+      var timer = setInterval(function() {
+        var current = str.substr(progress, 1);
+        if (current == '<') {
+          progress = str.indexOf('>', progress) + 1;
+        }
+        else if (interpunction || current == '。' || current == '，') {
+          if (interpunction == 0) {
+            progress++;
+          }
+          interpunction++;
+          if (interpunction == 3) {
+            interpunction = 0;
+          }
+        }
+        else{
+          progress++;
+        }
+        $ele.html(str.substr(0, progress) + (count++ & 1 ? '_' : ''));
+        if (progress >= str.length) {
+          clearInterval(timer);
+        }
+      }, 150);
+    });
+    return this;
+  }
+})(jQuery);
 
 function getHeartPoint(angle) {
   var t = angle / Math.PI;
