@@ -8,8 +8,11 @@ $(function() {
   gardenCanvas.height = $('canvas').height();
   gardenCtx = gardenCanvas.getContext("2d");
   gardenCtx.globalCompositeOperation = "lighter";
-  garden = new Garden(gardenCtx, gardenCanvas)
-  
+  garden = new Garden(gardenCtx, gardenCanvas);
+  $('canvas').click(function(e) {
+    garden.createRandomBloom(e.pageX, e.pageY);
+  });
+
   window.requestAnimFrame = (function(callback) {
     return window.requestAnimationFrame       || 
            window.webkitRequestAnimationFrame || 
@@ -20,6 +23,9 @@ $(function() {
              window.setTimeout(callback, 1000 / 60);
            };
   })();
+
+  heartAnimation();
+});
 
 (function($) {
   $.fn.typewriter = function() {
