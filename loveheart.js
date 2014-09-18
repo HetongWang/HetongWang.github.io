@@ -92,6 +92,7 @@ function startHeartAnimation() {
       angle += 0.2;
     }
   }, interval);
+  heartAnimation();
 }
 
 function heartAnimation() {
