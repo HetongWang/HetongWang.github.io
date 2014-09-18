@@ -9,27 +9,17 @@ $(function() {
   gardenCtx = gardenCanvas.getContext("2d");
   gardenCtx.globalCompositeOperation = "lighter";
   garden = new Garden(gardenCtx, gardenCanvas)
-
-  setTimeout(function() {
-    startHeartAnimation();
-    heartAnimation();
-  }, 1000);
   
-  setTimeout(function() {
-    $('#messages').typewriter();
-  }, 5500)
-});
-
-window.requestAnimFrame = (function(callback) {
-  return window.requestAnimationFrame       || 
-         window.webkitRequestAnimationFrame || 
-         window.mozRequestAnimationFrame    || 
-         window.oRequestAnimationFrame      || 
-         window.msRequestAnimationFrame     ||
-         function(callback) {
-           window.setTimeout(callback, 1000 / 60);
-         };
-})();
+  window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame       || 
+           window.webkitRequestAnimationFrame || 
+           window.mozRequestAnimationFrame    || 
+           window.oRequestAnimationFrame      || 
+           window.msRequestAnimationFrame     ||
+           function(callback) {
+             window.setTimeout(callback, 1000 / 60);
+           };
+  })();
 
 (function($) {
   $.fn.typewriter = function() {
