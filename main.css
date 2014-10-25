@@ -11,10 +11,10 @@ canvas {
 }
 #title {
 	position: absolute;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	top: 110px;
-	width: 100%;
+	width: 160px;
 	text-align: center;
 	font-family: sans-serif;
 }

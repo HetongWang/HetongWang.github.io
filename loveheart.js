@@ -25,6 +25,7 @@ $(function() {
   })();
 
   heartAnimation();
+  $('#title').css('left', (innerWidth - $('#title').width()) / 2);
 });
 
 (function($) {
